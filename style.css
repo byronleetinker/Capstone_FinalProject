@@ -7,7 +7,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image: url(./blocks.jpg);
+    background-image: url(./pla.webp);
     background-size: contain;
 }
 
@@ -18,8 +18,11 @@ body {
     text-align: center;
     font-weight: bolder;
     font-size: 50px;
-    margin-top: 10%;
+    margin-top: 5%;
+    text-shadow: 0 0 5px lightblue;
 }
+
+
 
 .container1 {
     height: 100vh;
@@ -30,7 +33,7 @@ body {
 }
 
 .container2 {
-    background: burlywood;
+    background: lightcyan;
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -40,3 +43,91 @@ img {
     width: 50vw;
     height: 100vh;
 }
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    width: 30%;
+    border-radius: 20px;
+    padding: 1%;
+    margin-bottom: 2%;
+    background: lightblue;
+}
+
+.navbar-links {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    background: transparent;
+    position: absolute;
+    margin-top: 3%;
+    left: -50%;
+    width: 10vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 20px;
+    font-family: sans-serif;
+    transition: all 0.3s linear;
+  }
+  
+  .navbar-links.active {
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 30px;
+    color: black;
+    margin-top: 5px;
+    text-shadow: 0 0 5px lightblue;
+  }
+  .navbar-links a {
+    color: black;
+    font-size: 30px;
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    text-shadow: 0 0 5px lightblue;
+  }
+  
+  .navbar-links li {
+    color: black;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0 0 5px lightblue;
+    flex-direction: column;
+  }
+  
+  .navbar-links.active {
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar-links :hover {
+    transition: 0.3s ease-in;
+    color: blue;
+  }
+  
+  .navbar-button :hover {
+    transition: 0.3s ease-in;
+    color: blue;
+  }
+
