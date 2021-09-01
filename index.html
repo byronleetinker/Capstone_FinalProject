@@ -8,36 +8,109 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  
+<button class="navbar-button" onclick="toggleNavbar()">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <nav class="navbar">
+    <ul class="navbar-links">
+        <li class="navbar-link">
+            <a href="./reg.html"  target="blank" class="navbar-anchor"
+              ><span class="iconify" data-icon="ant-design:shopping-cart-outlined"></span></a
+            >Shop
+          </li>
+      <li class="navbar-link">
+        <a href="#AboutUs" class="navbar-anchor" 
+          ><span class="iconify" data-icon="fluent:people-audience-24-filled"></span></a
+        >About Us
+      </li>
+      <li class="navbar-link">
+        <a href="#Contact"  target="blank" class="navbar-anchor"
+          ><span class="iconify" data-icon="bx:bxs-contact"></span></a
+        >Contact Us
+      </li>
+    </ul>
+
+</nav>
     <section class="container1">
     <div class="name">
-        Welcome to Books
+        Welcome to BookHub
     </div>
 </section>
+
     <section class="container2" id="AboutUs">
         <div class="body">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequuntur laborum itaque voluptates. <br> Autem, ut ab eaque quo perspiciatis commodi. Repellendus a aliquid maiores distinctio quas natus impedit beatae tempora.
-<button>Login</button>
-<button>Register</button>
 </div>
-<img src="./tb.jpeg" alt="">
+<img src="./she.jpg" alt="">
     </section>
-    <nav class="navbar">
-        <ul class="navbar-links">
-            <li class="navbar-link">
-                <a href="./products.html"  target="blank" class="navbar-anchor"
-                  ><span class="iconify" data-icon="ant-design:shopping-cart-outlined"></span></a
-                >Shop
-              </li>
-          <li class="navbar-link">
-            <a href="#AboutUs" class="navbar-anchor" 
-              ><span class="iconify" data-icon="ri:delete-bin-5-fill"></span></a
-            >About Us
-          </li>
-        </ul>
-    </nav>
-    <button class="navbar-button" onclick="toggleNavbar()">
-        <i class="fas fa-bars"></i>
-      </button>
+
+    <section class="container3" id="Contact">
+      <form id="form" action="https://formspree.io/f/xbjqlwjg" method="POST">
+        <div class="contact-input">
+          <div class="header1"><h2>Contact Me</h2><span> Get in Touch</span></div>
+          <!-- <div class="image">
+          <img src="map.png" alt="map"/> 
+        </div> -->
+          <div class="contact-icons">
+              <div class="phone"><i class="fas fa-mobile-alt"></i><p>0678633051</p></div>
+              <div class="email"><i class="far fa-envelope"></i><p>byronleetinker03@gmail.com</p></div>
+              <div class="address"><i class="fas fa-map-pin"></i><p>Cape Town, South Africa</p></div> 
+          </div>
+        </div>
+      <form class="form">
+        <div class="contact-form">
+          <div class="contact-info">
+            <label class="contact-label"> Your name:</label>
+            <input
+              class="contact-bar"
+              type="name"
+              name="name"
+              required
+              placeholder="Name"
+            />
+          </div>
+          
+        </div>
+          <div class="contact-info">
+            <label class="contact-label"> Your phone number:</label>
+            <input
+              class="contact-bar"
+              type="phone number"
+              name="number"
+              required
+              placeholder="Phone number"
+            />
+          </div>
+          <div class="contact-message">
+            <label class="contact-label"> Your message:</label>
+            <input
+              class=" contact-bar"
+              type="message"
+              name="message"
+              required
+              placeholder="Your message"
+            >
+          </div>
+          <div class="contact-info">
+            <label class="contact-label"> Your email:</label>
+            <input
+              class="contact-bar"
+              type="email"
+              name="_replyto"
+              required
+              placeholder="Email"
+            />
+            
+          <button class="contact-button" type="submit">SUBMIT</button>
+        </div>
+      </form>
+  </section>
+
+
+    
+  
       <script
       src="https://kit.fontawesome.com/63e7421244.js"
       crossorigin="anonymous"
