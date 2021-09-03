@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Account</title>
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+    <div class="Admin">
+        <h1 class="card-container-heading">Admin Users</h1>
+        <button class="navbar-button" onclick="toggleNavbar()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="navbar">
+          <ul class="navbar-links">
+            <li class="navbar-link">
+                <a href="./index.html" target="blank" class="navbar-anchor"
+                  ><span class="iconify" data-icon="carbon:logout"></span></a
+                >Logout
+              </li>
+            <li class="navbar-link">
+                <a href="./cart.html" target="blank" class="navbar-anchor"
+                  ><span class="iconify" data-icon="bi:basket"></span></a
+                >View Cart
+              </li>
+            <li class="navbar-link">
+              <a href="./shop.html"  target="blank" class="navbar-anchor"
+                ><span class="iconify" data-icon="ant-design:shopping-cart-outlined"></span></a
+              >Shop
+            </li>
+          </ul>
+          </nav>
+        </div>
+        <div class="container">
+          <h1>Login.</h1>
+          <form class="form">
+            <div class="inputs">
+              <input type="text" placeholder="Username" class="username" />
+              <input type="text" placeholder="Password" class="password" />
+    
+              <div class="buttons">
+                <button type="submit" class="but1">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <script src="main.js"></script>
+        <script
+      src="https://kit.fontawesome.com/63e7421244.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+</body>
+</html>

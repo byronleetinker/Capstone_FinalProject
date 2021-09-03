@@ -42,6 +42,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 img {
@@ -57,11 +58,22 @@ img {
 }
 
 button {
-    width: 30%;
-    border-radius: 20px;
+    width: 20%;
+    border-radius: 100px;
     padding: 1%;
     margin-bottom: 2%;
-    background: lightblue;
+    font-weight: bolder;
+}
+
+.top {
+  background:#EAE151;
+  width: 20%;
+}
+
+.back {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .navbar-links {
@@ -99,7 +111,7 @@ button {
     outline: none;
     padding: 30px;
     color: black;
-    margin-right: -10%;
+    margin-right: -5%;
     text-shadow: 0 0 5px #EAE151;
   }
   .navbar-links a {
@@ -129,7 +141,7 @@ button {
   
   .navbar-links :hover {
     transition: 0.3s ease-in;
-    color: lightblue;
+    color: #EAE151;
   }
   
   .navbar-button :hover {
