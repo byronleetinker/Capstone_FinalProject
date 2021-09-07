@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -45,35 +46,11 @@ body {
   flex-direction: column;
 }
 
-img {
-    width: 50vw;
-    height: 100vh;
-}
-
 .body {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-button {
-    width: 20%;
-    border-radius: 100px;
-    padding: 1%;
-    margin-bottom: 2%;
-    font-weight: bolder;
-}
-
-.top {
-  background:#EAE151;
-  width: 20%;
-}
-
-.back {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
 }
 
 .navbar-links {
@@ -154,12 +131,13 @@ button {
   background-color: #1e1e1e;
   height: 100vh;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-  padding-right: 42%;
+  padding-left: 0%;
   padding-bottom: 100px;
   color: white;
-  font-size: 20px;
+  font-size: 20px; 
 }
 
 .header1 {
@@ -172,11 +150,17 @@ button {
   font-size: 15px;
 }
 
+img {
+  width: 40vw;
+  height: 100vh;
+}
+
 .image {
-  width: 50vw;
-  height: 30vh;
-  margin-top: 10px;
-  margin-bottom: -60px;
+  width: 30vw;
+  height: 80vh;
+  margin-top: 80px;
+  margin-bottom: 0px;
+  margin-left: -30%;
 }
 
 .contact-icons {
@@ -248,7 +232,6 @@ h2 {
   height: 4vh;
   background-color: #EAE151;
   border: #EAE151;
-  color: black;
   margin-top: 10px;
 }
 
@@ -307,4 +290,28 @@ h2 {
 .form {
   display: flex;
   flex-direction: row;
+}
+
+button {
+  width: 20%;
+  border-radius: 100px;
+  padding: 1%;
+  margin-bottom: 2%;
+  font-weight: bolder;
+}
+
+.top {
+  font-size: 13px;
+  background:#EAE151;
+  width: 80px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.back{
+  display: flex;
+  justify-content: end;
+  background-color: #1e1e1e;
+  padding-right: 20px;
 }

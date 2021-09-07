@@ -5,8 +5,6 @@ function toggleNavbar() {
 
   let loginButton = document.querySelector(".but1");
 let form = document.querySelector(".form");
-let RegisterButton = document.querySelector(".but2");
-console.log(form);
 
 function login(username, password) {
   console.log(username);
@@ -31,21 +29,23 @@ function login(username, password) {
         myStorage.setItem("password", password);
         window.location.href = "./shop.html";
       }
-    });
+    });  
 }
+if (form != null) {
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  let username = document.querySelector(".username").value;
-  let password = document.querySelector(".password").value;
+    let username = document.querySelector(".username").value;
+    let password = document.querySelector(".password").value;
 
-  login(username, password);
-});
+    login(username, password);
+  });
+}
 
 let RegisterButton = document.querySelector(".but2");
 console.log(form);
-let form = document.querySelector(".form");
+let regForm = document.querySelector(".reg-form");
 
 if (regForm != null) {
   regForm.addEventListener("submit", (e) => {
@@ -54,9 +54,8 @@ if (regForm != null) {
     let new_user = {
       first_name: document.querySelector("#name").value,
       last_name: document.querySelector("#surname").value,
-      email_address: document.querySelector("#email").value,
-      // address: document.querySelector(".user5").value,
-      username: document.querySelector(".username").value,
+      // email: document.querySelector("#email").value,
+      username: document.querySelector("#username").value,
       password: document.querySelector("#password").value,
     };
 
@@ -65,82 +64,85 @@ if (regForm != null) {
     fetch("http://127.0.0.1:5000/registration/", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-type": "application/json",
       },
       body: JSON.stringify(new_user),
     })
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        // window.location.href = "shop.html";
+        window.location.href = "shop.html";
       });
   });
 }
 
-function toggleaddToCart(id) {
-  cart.push(id);
-    console.log(cart);
-  let product = products.find(item => {
-  return `.add-${id}`});
-  //   console.log(add_btn);
-  populateCart();
+function getCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let container = document.querySelector(".container");
+
+  console.log(cart);
+
+  container.innerHTML = "";
+
+  cart.forEach((item) => {
+    console.log(item[0]);
+    let book = item[0]
+  //   let detail = item[0];
+
+    container.innerHTML += `
+      <div class="container">
+      <h4 class="name">${book.name}</h4>
+      <h4 class="price">${book.price}</h4>
+      <h4 class="description">${book.description}</h4>
+      <button onclick="addToCart">Add to Cart</button>
+      <button onclick="removeFromCart(${book.book_id})" class="icons"><i class="far fa-trash-alt">remove</i></button>
+      </div>
+    `;
+  });
 }
 
-function toggledeleteProduct(index) {
-  console.log(index);
-  // http://127.0.0.1:5000/delete-product/${index}/
-  let delConfirm = confirm("Are you sure you want to delete this product?");
-  if (delConfirm) {
-    fetch(`http://127.0.0.1:5000/delete-product/${index}/`);
-    createCards();
-  }
+function removeFromCart(id) {
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  let update = cart.filter((item) => item[0].book_id != id);
+
+  localStorage.setItem("cart", JSON.stringify(update));
+
+  getCart();
+  getTotal();
 }
 
-function populateCart() {
-  fetch("http://127.0.0.1:5000/get-products/").then((request) => {
-    request.json().then((obj) => {
-      //   console.log(obj);
-      data = obj.data;
-      let cart_container = document.querySelector(".cart");
-      let total_cost = 0;
-      //   let total = 0;
-      cart_container.innerHTML = ``;
-      cart.forEach((order) => {
-        // console.log(order);
-        data.forEach((product) => {
-          if (product[0] == order) {
-            // console.log(product);
-            total_cost += parseFloat(product[2]);
-            cart_container.innerHTML += `<div class="cart-item">
-            <p class="id">${product[0]}</p>
-            <p class="name">${product[1]}</p>
-            <p class="price">${product[2]}</p>
-            <p class="quantity">1</p>
-          </div>`;
-          }
-        });
-      });
+getCart();
+
+function getTotal() {
+  let total = 0;
+  let cart = JSON.parse(localStorage.getItem("cart"));
+
+  cart.forEach(
+    // (item) => console.log(item[0].price))
+    (item) => (total += parseInt(item[0].price)))
+  
+
+  document.querySelector(".total").innerHTML = "Your total is: R" + total;
+}
+
+
+function addToCart(book_id) {
+  fetch("https://bookhub-bookstore.herokuapp.com/get-product/")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.data);
+      let books = data.data;
+
+      let book = books.filter((book) => book.book_id == book_id);
+      let cart_items = JSON.parse(localStorage.getItem("cart"));
+      console.log(book);
+
+      if (cart_items == null) {
+        cart_items = [];
+      }
+
+      cart_items.push(book);
+      localStorage.setItem("cart", JSON.stringify(cart_items));
     });
-  });
 }
-
-
-
-
-
-Luyanda Aneeqah
-
-Aneenda
-
-Aneeda
-
-luqah
-
-ananda
-
-luyeeqah
-
-aneyanda
-
-luyaneeqah
 
