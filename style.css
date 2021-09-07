@@ -18,7 +18,7 @@ body {
     font-weight: bolder;
     font-size: 50px;
     margin-top: -10%;
-    text-shadow: 0 0 10px #EAE151;
+    text-shadow: 0 0 10px #011638;
 }
 
 .container1 {
@@ -32,14 +32,14 @@ body {
 }
 
 .container2 {
-    background: #EFEA5A;
+    background: #011638;
     height: 100vh;
     display: flex;
     flex-direction: row;
 }
 
 .container3 {
-  background: #EAE151;
+  background: #011638;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -89,7 +89,7 @@ body {
     padding: 30px;
     color: black;
     margin-right: -5%;
-    text-shadow: 0 0 5px #EAE151;
+    text-shadow: 0 0 5px #011638;
   }
   .navbar-links a {
     color: black;
@@ -97,7 +97,7 @@ body {
     display: flex;
     margin-bottom: 10px;
     flex-direction: column;
-    text-shadow: 0 0 5px #EAE151;
+    text-shadow: 0 0 5px #011638;
   }
   
   .navbar-links li {
@@ -107,7 +107,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    text-shadow: 0 0 5px #EAE151;
+    text-shadow: 0 0 5px #011638;
     flex-direction: column;
   }
   
@@ -118,12 +118,12 @@ body {
   
   .navbar-links :hover {
     transition: 0.3s ease-in;
-    color: #EAE151;
+    color: #011638;
   }
   
   .navbar-button :hover {
     transition: 0.3s ease-in;
-    color: #EAE151;
+    color: #011638;
   }
 
 
@@ -176,7 +176,7 @@ img {
 
 .contact-icons i {
   font-size: 20px;
-  color: #EAE151;
+  color: #011638;
   margin-bottom: 10px;
 }
 
@@ -230,9 +230,10 @@ h2 {
 .contact-button {
   width: 10vw;
   height: 4vh;
-  background-color: #EAE151;
-  border: #EAE151;
+  background-color: #011638;
+  border: #011638;
   margin-top: 10px;
+  color: antiquewhite;
 }
 
 .phone {
@@ -302,10 +303,12 @@ button {
 
 .top {
   font-size: 13px;
-  background:#EAE151;
+  background:#011638;
   width: 80px;
+  border: #011638;
   border-radius: 100px;
   display: flex;
+  color: rgb(119, 69, 4);
   justify-content: center;
 }
 
