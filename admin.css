@@ -3,3 +3,140 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(./val-pierce-5H5xjUsgpLY-unsplash.jpg);
+    background-size: cover;
+    background-position-y: 35% ;
+}
+
+.navbar-links {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    background: transparent;
+    position: absolute;
+    margin-top: 5%;
+    left: -50%;
+    width: 10vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    gap: 20px;
+    font-family: sans-serif;
+    transition: all 0.3s linear;
+    gap: 50px;
+  }
+  
+  .navbar-links.active {
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 30px;
+    color: black;
+    margin-right: 0%;
+    text-shadow: 0 0 5px #011638;
+  }
+  .navbar-links a {
+    color: black;
+    font-size: 30px;
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    text-shadow: 0 0 5px #011638;
+  }
+  
+  .navbar-links li {
+    color: black;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0 0 5px #011638;
+    flex-direction: column;
+  }
+  
+  .navbar-links.active {
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar-links :hover {
+    transition: 0.3s ease-in;
+    color: #011638;
+  }
+  
+  .navbar-button :hover {
+    transition: 0.3s ease-in;
+    color: #011638;
+  }
+
+.card-container-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #011638;
+ }
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #79B990;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    font-size: 20px;
+}
+
+button {
+    font-size: 15px;
+    background-color:#79B990;
+    padding: 10px;
+    border-radius: 50px;
+    color: ivory;
+}
+
+a {
+    color: #011638;
+}
+
+a:hover {
+transition: 0.3s ease-in ;
+color: #6F8AB7;
+}

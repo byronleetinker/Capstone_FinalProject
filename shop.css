@@ -3,3 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #CFE0C3;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}

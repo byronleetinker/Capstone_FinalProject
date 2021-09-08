@@ -27,6 +27,7 @@ function login(username, password) {
         myStorage.setItem("jwt-token", data["access_token"]);
         myStorage.setItem("username", username);
         myStorage.setItem("password", password);
+        alert("Login Successful")
         window.location.href = "./shop.html";
       }
     });  
@@ -71,6 +72,7 @@ if (regForm != null) {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        alert("Registration Successful")
         window.location.href = "shop.html";
       });
   });
@@ -86,16 +88,15 @@ function getCart() {
 
   cart.forEach((item) => {
     console.log(item[0]);
-    let book = item[0]
   //   let detail = item[0];
 
     container.innerHTML += `
       <div class="container">
-      <h4 class="name">${book.name}</h4>
-      <h4 class="price">${book.price}</h4>
-      <h4 class="description">${book.description}</h4>
+      <h4 class="name">${item.name}</h4>
+      <h4 class="price">${item.price}</h4>
+      <h4 class="description">${item.description}</h4>
       <button onclick="addToCart">Add to Cart</button>
-      <button onclick="removeFromCart(${book.book_id})" class="icons"><i class="far fa-trash-alt">remove</i></button>
+      <button onclick="removeFromCart(${item.book_id})" class="icons"><i class="far fa-trash-alt">remove</i></button>
       </div>
     `;
   });
@@ -121,7 +122,6 @@ function getTotal() {
     // (item) => console.log(item[0].price))
     (item) => (total += parseInt(item[0].price)))
   
-
   document.querySelector(".total").innerHTML = "Your total is: R" + total;
 }
 
@@ -146,3 +146,22 @@ function addToCart(book_id) {
     });
 }
 
+
+fetch("https://bookhub-bookstore.herokuapp.com/get-product/")
+.then((response) => response.json())
+.then((data) => {
+  console.log(data.data);
+  let container = document.querySelector("#container")
+  container.innerHTML += `
+  <div class="card">
+  <div class="name">The Great Gatsby</div>
+  <div class="card-details">
+    <span class="price">R200</span>
+    <span class="description"
+      >The Great Gatsby, third novel by F. Scott Fitzgerald, published in 1925 by Charles Scribner's Sons. <br> Set in Jazz Age New York, the novel tells the tragic story of Jay Gatsby, a self-made millionaire, and his pursuit of Daisy Buchanan, a wealthy young woman whom he loved in his youth.</span
+    >
+    <button class="add" onclick="toggleaddToCart">Add to cart</button>
+  </div>
+</div>
+  `
+  console.log(data);});
