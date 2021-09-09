@@ -13,78 +13,13 @@ body {
     background-position-y: 35% ;
 }
 
-.navbar-links {
-    display: flex;
-    list-style-type: none;
-    flex-direction: column;
-    background: transparent;
-    position: absolute;
-    margin-top: 5%;
-    left: -50%;
-    width: 10vw;
-    height: 50vh;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    gap: 20px;
-    font-family: sans-serif;
-    transition: all 0.3s linear;
-    gap: 50px;
-  }
-  
-  .navbar-links.active {
-    top: 0;
-    left: 0;
-  }
-  
-  .navbar-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 100;
-    font-size: 30px;
-    background: transparent;
-    border: none;
-    outline: none;
-    padding: 30px;
-    color: black;
-    margin-right: -5%;
-    text-shadow: 0 0 5px #011638;
-  }
-  .navbar-links a {
-    color: black;
-    font-size: 30px;
-    display: flex;
-    margin-bottom: 10px;
-    flex-direction: column;
-    text-shadow: 0 0 5px #011638;
-  }
-  
-  .navbar-links li {
-    color: black;
-    font-size: 10px;
+.register {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    text-shadow: 0 0 5px #011638;
-    flex-direction: column;
-  }
-  
-  .navbar-links.active {
-    top: 0;
-    left: 0;
-  }
-  
-  .navbar-links :hover {
-    transition: 0.3s ease-in;
-    color: #011638;
-  }
-  
-  .navbar-button :hover {
-    transition: 0.3s ease-in;
-    color: #011638;
-  }
+    font-size: 20px;
+    color:#011638;
+}
 
 h1 {
     display: flex;
@@ -105,14 +40,6 @@ h1 {
     margin-bottom: 20px;
     gap: 10px;
     font-size: 20px;
-}
-
-.register {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color:#011638;
 }
 
 button {
