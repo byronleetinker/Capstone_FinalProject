@@ -11,6 +11,7 @@ body {
     background-image: url(./val-pierce-wcxIGjTG_7M-unsplash.jpg);
     background-size: cover;
     background-position-y: 30% ;
+    font-family: sans-serif;
 }
 
 h1 {
@@ -57,4 +58,3 @@ a:hover {
 transition: 0.3s ease-in ;
 color: #6F8AB7;
 }
-

@@ -8,26 +8,38 @@
     <link rel="stylesheet" href="./adminshop.css">
 </head>
 <body>
-    <div class="Products">
-      <h1 class="card-container-heading">BookHub</h1>
-      </button>
-        <div class="container">
-            <div class="card">
-              <div class="card-header">The Great Gatsby</div>
-              <div class="card-details">
-                <span>R200</span>
-                <span
-                  >The Great Gatsby, third novel by F. Scott Fitzgerald, published in 1925 by Charles Scribner's Sons. <br> Set in Jazz Age New York, the novel tells the tragic story of Jay Gatsby, a self-made millionaire, and his pursuit of Daisy Buchanan, a wealthy young woman whom he loved in his youth.</span
-                >
-                <button class="edit" onclick="toggleedit"> Edit</button>
-              </div>
-            </div>
-        </div>
+  <div class="Products">
+    <h1 class="card-container-heading">Admin Shop</h1>
+    <button class="navbar-button" onclick="toggleNavbar()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="navbar">
+      <ul class="navbar-links">
+        <li class="navbar-link">
+          <a href="./cart.html"  target="blank" class="navbar-anchor"
+            ><span class="iconify" data-icon="bi:basket" onclick="togglepopulateCart()"></span></a
+          >View Cart
+        </li>
+        <li class="navbar-link">
+          <a href="./shop.html" target="blank" class="navbar-anchor"
+            ><span class="iconify" data-icon="carbon:logout"></span></a
+          >Logout
+        </li>
+        <li class="navbar-link">
+          <a href="./index.html"  target="blank" class="navbar-anchor"
+            ><span class="iconify" data-icon="ant-design:home-filled"></span></a
+          >Home
+        </li>
+      </ul>
+      </nav>
+      <div id="container1">
+      </div>
         <script src="main.js"></script>
         <script
       src="https://kit.fontawesome.com/63e7421244.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <footer>Design by Byron Lee Tinker.</footer>
 </body>
 </html>

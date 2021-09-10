@@ -11,6 +11,7 @@ body {
     background-image: url(./val-pierce-5H5xjUsgpLY-unsplash.jpg);
     background-size: cover;
     background-position-y: 35% ;
+    font-family: sans-serif;
 }
 
 .register {

@@ -11,6 +11,7 @@ body {
     background-image: url(./val-pierce-5H5xjUsgpLY-unsplash.jpg);
     background-size: cover;
     background-position-y: 35% ;
+    font-family: sans-serif;
 }
 
 .navbar-links {
@@ -49,7 +50,7 @@ body {
     padding: 30px;
     color: black;
     margin-right: 0%;
-    text-shadow: 0 0 5px #011638;
+    text-shadow: 0 0 5px #79B990;
   }
   .navbar-links a {
     color: black;
@@ -57,7 +58,7 @@ body {
     display: flex;
     margin-bottom: 10px;
     flex-direction: column;
-    text-shadow: 0 0 5px #011638;
+    text-shadow: 0 0 5px #79B990;
   }
   
   .navbar-links li {
@@ -67,7 +68,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    text-shadow: 0 0 5px #011638;
+    text-shadow: 0 0 5px #79B990;
     flex-direction: column;
   }
   
@@ -78,12 +79,12 @@ body {
   
   .navbar-links :hover {
     transition: 0.3s ease-in;
-    color: #8d99ac;
+    color: #79B990;
   }
   
   .navbar-button :hover {
     transition: 0.3s ease-in;
-    color: #011638;
+    color: #79B990;
   }
 
 .card-container-heading {
@@ -133,10 +134,11 @@ button {
 }
 
 a {
-    color: #011638;
+    color: #79B990;
 }
 
 a:hover {
 transition: 0.3s ease-in ;
 color: #6F8AB7;
 }
+

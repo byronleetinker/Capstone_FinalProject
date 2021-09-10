@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    font-family: sans-serif;
 }
 
 .name {
@@ -18,7 +19,7 @@ body {
     font-weight: bolder;
     font-size: 50px;
     margin-top: -10%;
-    text-shadow: 0 0 10px #011638;
+    text-shadow: 0 0 10px #79B990;
 }
 
 .container1 {
@@ -52,6 +53,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 50px;
 }
 
 .navbar-links {
@@ -90,7 +92,7 @@ body {
     padding: 30px;
     color: black;
     margin-right: -5%;
-    text-shadow: 0 0 5px #011638;
+    text-shadow: 0 0 5px #79B990;
   }
   .navbar-links a {
     color: black;
@@ -98,7 +100,7 @@ body {
     display: flex;
     margin-bottom: 10px;
     flex-direction: column;
-    text-shadow: 0 0 5px #011638;
+    text-shadow: 0 0 5px #79B990;
   }
   
   .navbar-links li {
@@ -108,7 +110,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    text-shadow: 0 0 5px #011638;
+    text-shadow: 0 0 5px #79B990;
     flex-direction: column;
   }
   
@@ -119,22 +121,26 @@ body {
   
   .navbar-links :hover {
     transition: 0.3s ease-in;
-    color: #011638;
+    color: #79B990;
   }
   
   .navbar-button :hover {
     transition: 0.3s ease-in;
-    color: #011638;
+    color: #79B990;
   }
 
   a {
     color: antiquewhite;
   }
 
+  .about h1{
+    margin-top: 20%;
+  }
+
 
 #Contact {
   background-color: #1e1e1e;
-  height: 100vh;
+  height: 105vh;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -165,7 +171,7 @@ img {
   height: 80vh;
   margin-top: 80px;
   margin-bottom: 0px;
-  margin-left: -20%;
+  margin-left: -21%;
 }
 
 .contact-icons {
@@ -177,11 +183,12 @@ img {
   font-size: 10px;
   margin-bottom: 5%;
   margin-top: -5%;
+  margin-left: 2%;
 }
 
 .contact-icons i {
   font-size: 20px;
-  color: #011638;
+  color: #79B990;
   margin-bottom: 10px;
 }
 
@@ -203,6 +210,7 @@ label {
   color: white;
   border-radius: 5px;
   margin-bottom: 10px;
+  margin-left: 30%;
   background: rgba(255, 255, 255, 0);
   border: 2px solid rgba(255, 255, 255, 0.18);
 }
@@ -211,8 +219,17 @@ label {
   color: white;
   border-radius: 5px;
   margin-bottom: 10px;
+  margin-left: 30%;
   background: rgba(255, 255, 255, 0);
   border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  color: #79B990;
 }
 
 h2 {
@@ -238,6 +255,7 @@ h2 {
   background-color: #011638;
   border: #011638;
   margin-top: 10px;
+  margin-left: 36%;
   color: antiquewhite;
 }
 
@@ -313,7 +331,7 @@ button {
   border: #011638;
   border-radius: 100px;
   display: flex;
-  color: rgb(119, 69, 4);
+  color: #79B990;
   justify-content: center;
 }
 
@@ -322,4 +340,27 @@ button {
   justify-content: end;
   background-color: #1e1e1e;
   padding-right: 20px;
+  margin-top: -10%;
+}
+
+.top:hover {
+  transition: 0.3s ease-in;
+  background: #79B990;
+}
+
+.contact-button:hover {
+  transition: 0.3s ease-in;
+  background: #79B990;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: antiquewhite;
+  background: #79B990;
+  font-size: 15px;
+  font-weight: bolder;
+  
 }

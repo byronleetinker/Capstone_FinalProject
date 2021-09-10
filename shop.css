@@ -6,6 +6,7 @@
 
 body {
     background-color: #CFE0C3;
+    font-family: sans-serif;
 }
 
 h1 {
@@ -113,6 +114,7 @@ h1 {
      margin-top: 20px;
      margin-bottom: -0px;
       color: aliceblue;
+      font-size: 12px;
   }
 
   .card {
@@ -125,7 +127,8 @@ h1 {
     justify-content: center;
     background: #011638;
     border-radius: 10px;
-    border-left: 5px solid #79B990;
+    border-top: 10px solid #79B990;
+    border-left: 10px solid #79B990;
     overflow: hidden;
     padding: 1%;
   }
@@ -138,7 +141,7 @@ h1 {
     align-items: center;
     text-align: center;
     padding: 10px;
-    font-size: 12px;
+    font-size: 11px;
     gap: 10px;
   }
 
@@ -159,12 +162,6 @@ h1 {
     margin-bottom: 0px;
   }
   
-  button:hover {
-    background: #79B990;
-    backdrop-filter: blur(1.5px);
-    -webkit-backdrop-filter: blur(1.5px);
-  }
-  
   .card-heading,
   .card-subtitle,
   .card-description,
@@ -176,4 +173,20 @@ h1 {
     width: 100%;
     height: 50%;
     object-fit: cover;
+  }
+
+  .add:hover {
+    background: #79B990;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: antiquewhite;
+    background: #79B990;
+    font-size: 15px;
+    font-weight: bolder;
+
   }
