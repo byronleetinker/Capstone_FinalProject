@@ -98,8 +98,8 @@ if (regForm != null) {
     e.preventDefault();
 
     let new_user = {
-      first_name: document.querySelector("#name").value,
-      last_name: document.querySelector("#surname").value,
+      name: document.querySelector("#name").value,
+      surname: document.querySelector("#surname").value,
       username: document.querySelector("#username").value,
       password: document.querySelector("#password").value,
     };
@@ -125,7 +125,7 @@ if (regForm != null) {
 // Get Cart
 function getCart() {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  let container = document.querySelector(".container1");
+  let container = document.querySelector("#container1");
   console.log(container);
 
   console.log(cart);
@@ -207,8 +207,8 @@ fetch("https://bookhub-bookstore.herokuapp.com/get-product/")
   <img src="./neb.jpg" alt="" />
   <div class="name">${product[1]}</div>
   <div class="card-details">
-    <p class="price">${product[2]}</p>   
-    <p class="description">${product[3]}</p>  
+    <p class="price">${product[2]}</p>
+    <p class="description">${product[3]}</p>
       <button class="add" onclick="addToCart(${product[0]})">Add to cart</button>
   </div>
 </div>
@@ -224,10 +224,10 @@ fetch("https://bookhub-bookstore.herokuapp.com/get-product/")
     // console.log(data.data);
     let products = data.data;
     console.log(products);
-    let container = document.querySelector(".container1");
+    let container = document.querySelector("#container1");
     products.forEach((product) => {
       container.innerHTML += `
-  <div class="container1">
+  <div id="container1">
     <div class="card">
   <img src="./neb.jpg" alt="" />
   <div class="name">${product[1]}</div>
@@ -236,7 +236,7 @@ fetch("https://bookhub-bookstore.herokuapp.com/get-product/")
     <p class="description">${product[3]}</p>
       <button class="delete" onclick="toggledelete">Delete</button>
       <button class="edit" onclick="toggleedit">Edit</button>
-      
+
   </div>
 </div>
 </div>
